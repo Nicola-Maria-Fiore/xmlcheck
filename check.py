@@ -35,7 +35,7 @@ for index, row in df.iterrows():
     if pdf_name in dic:
         df.at[index,col] = 1
         dic.pop(pdf_name, None)
-    elif row[link_col]=='.' or row[link_col]=="":
+    elif row[link_col]=='.' or row[link_col]=="0":
         df.at[index,col] = row[link_col]
     else:
         df.at[index,col] = 0 
